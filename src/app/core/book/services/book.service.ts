@@ -12,7 +12,7 @@ import { Book, BookResponse } from "../models/book.model";
 
 
 export class BookService extends BookRepository{
-    private apiUrl = 'http://localhost:8081/books/';
+    private apiUrl = 'http://98.82.143.49:8081/books/';
 
     constructor(private hhtp: HttpClient){
         super();
@@ -23,6 +23,6 @@ export class BookService extends BookRepository{
 
     }
     addBook(book: Book): Observable<void> {
-        return this.hhtp.post<void>("http://localhost:8083/books/",book)
+        return this.hhtp.post<void>("http://34.206.214.160:8083/books/",book)
     }
 }
